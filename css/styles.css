@@ -84,7 +84,7 @@ body {
   left: 0; */
 }
 
-.header-wrapper {
+#header {
   display: flex;
   justify-content: space-between;
   align-items: center;
