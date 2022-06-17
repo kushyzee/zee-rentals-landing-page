@@ -30,14 +30,14 @@
             <!-- ===== RESERVE VEHICLE SECTION STARTS ====== -->
             <section>
                 <h2>Reserve a vehicle <span>(Time limit between 8:00 AM and 10:00 PM)</span></h2>
-                <form action="#" method="post">
+                <form class="reserve-form" action="#" method="post">
                     <input type="search" name="location" id="location" placeholder="Enter location">
                     <div class="pickup-date">
-                        <label for="pickup">Pickup date</label>
+                        <label for="pickup">Pickup date:</label>
                         <input type="date" name="pickup" id="pickup">
 
                         <!-- ====== PICKUP TIME SECTION START ======= -->
-                        <label for="time">Time</label>
+                        <label for="time">Time:</label>
                         <select name="pickup-time" id="pickup-time">
                             <option value="8:00 AM">08:00 AM</option>
                             <option value="8:30 AM">08:30 AM</option>
@@ -69,15 +69,15 @@
                             <option value="7:00 PM">09:30 PM</option>
                             <option value="7:00 PM">10:00 PM</option>
                         </select>
-                        <!-- ====== PICKUP TIME SECTION START ======= -->
+                        <!-- ====== PICKUP TIME SECTION END ======= -->
                     </div>
 
                     <div class="return-date">
-                        <label for="return">Return date</label>
+                        <label for="return">Return date:</label>
                         <input type="date" name="return" id="return">
 
                         <!-- ====== RETURN TIME SECTION START ======= -->
-                        <label for="time">time</label>
+                        <label for="time">Time:</label>
                         <select name="return-time" id="return-time">
                             <option value="8:00 AM">08:00 AM</option>
                             <option value="8:30 AM">08:30 AM</option>
@@ -111,7 +111,7 @@
                         </select>
                         <!-- ====== RETURN TIME SECTION END ======= -->
                     </div>
-                    <input type="submit" value="Show offers">
+                    <div class="btn-wrapper"><input class="reserve-btn" type="submit" value="Show offers"></div>
                 </form>
             </section>
             <!-- RESERVE VEHICLE SECTION END ======= -->
