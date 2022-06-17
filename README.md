@@ -82,7 +82,7 @@ The following guidelines were provided:
 
 ### Useful resources
 
-[mdn web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)gave me the solution on how to align flex items horizontally using `margin-left` auto
+[mdn web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container) gave me the solution on how to align flex items horizontally using `margin-left` auto
 
 ## Author
 
