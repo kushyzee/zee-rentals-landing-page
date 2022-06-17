@@ -70,7 +70,19 @@ The following guidelines were provided:
 
 ### What I learned
 
+- I was having problem with toggling the sidebar on and off. after hiding the sidebar with `#header ul {right: -100%}` it refused to show up when i set `#checkbox:checked ~ ul {right: 0;}` but i solved it by adding nav to it. so the right code is:
+
+```css
+#checkbox:checked ~ nav ul {
+  right: 0;
+}
+```
+
+- another issue that came up was trying to position the navbar toggler to the far right. despite using flexbox `justify-content: space-between`, it still didn't align it to the right. A quick google search showed i have to set a `margin-left: auto` on the log in/register button and that fixed the issue.
+
 ### Useful resources
+
+[mdn web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)gave me the solution on how to align flex items horizontally using `margin-left` auto
 
 ## Author
 
