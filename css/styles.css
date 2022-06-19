@@ -288,7 +288,7 @@ h2>span {
 .over50 {
   background-color: var(--secondary-color);
   color: white;
-  margin: 0 -2em;
+  margin: 0 -1em;
   padding: 2em;
 }
 
