@@ -64,7 +64,10 @@ select {
 
 /* ==== VARIABLES ======= */
 :root {
-  --secondary-black: hsl(0, 0%, 4%);
+  --secondary-color: hsl(0, 0%, 0%);
+  --primary-color: hsl(0, 0%, 6%);
+  --hover-color: hsl(0, 0%, 15%);
+  --grey-text: hsl(0, 0%, 15%);
 }
 
 /* ======== PAGE STYLING ============= */
@@ -76,7 +79,7 @@ html {
 }
 
 body {
-  background: black;
+  background: var(--primary-color);
   color: white;
   font-size: 1.6rem;
 }
@@ -90,7 +93,7 @@ body {
   width: 100%; 
   padding: 0 1em;
 
-  background-color: var(--secondary-black);
+  background-color: var(--secondary-color);
   position: fixed;
   top: 0;
   left: 0;
@@ -133,7 +136,7 @@ input[type="checkbox"] {
   min-height: 20vh;
   min-width: 50vw;
 
-  background-color: var(--secondary-black);
+  background-color: var(--secondary-color);
   list-style-type: none;
 
   transition: all .3s linear;
@@ -159,16 +162,20 @@ a {
 }
 
 #header li a:hover {
-  background-color: hsl(0, 0%, 15%);
+  background-color: var(--hover-color);
   border-radius: 10px;
 }
 
 /* ===== MAIN SECTION ====== */
 main {
-  margin: 6em 1.2em 2em;
+  margin: 6em 0 2em;
 }
 
 /* reserve a vehicle element */
+.reserve {
+  padding: 0 1em;
+}
+
 main h2 {
   margin-bottom: 1em;
   
@@ -253,8 +260,78 @@ h2>span {
 }
 
 
+/* STYLING FOR THE WHY US SECTION STARTS */
+#why-us {
+  padding: 1em 1em 0;
+  margin-bottom: 3em;
+  background-color: white;
+  color: var(--grey-text);
+}
 
+#video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 1.5em;
+}
 
+#why-us h1 {
+  margin-bottom: .8em;
+  
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+
+  color: var(--secondary-color);
+}
+
+.over50 {
+  background-color: var(--secondary-color);
+  color: white;
+  margin: 0 -2em;
+  padding: 2em;
+}
+
+.over50 h2 {
+  margin-bottom: .5em;
+}
+
+.over50 form {
+  display: flex;
+  /* gap: 1.5em; */
+  padding-bottom: 1em;
+}
+
+/* SEARCH BUTTON WITH THE ICON */
+.over50 button[type="submit"] {
+  display: flex;
+  padding: .1em .5em;
+  border: none;
+  outline: none;
+
+  font-size: 2rem;
+  color: white;
+  background-color: transparent;
+
+  transition: all .3s linear;
+}
+
+.over50 button[type="submit"]:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  opacity: .5;
+}
+
+#location-search {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid white;
+  /* padding: .5em .2em; */
+
+  background-color: black;
+  color: white;
+  outline: none; 
+}
 
 /* ====== MEDIA QUERIES */
 @media (min-width: 800px) {
