@@ -79,9 +79,10 @@ html {
 }
 
 body {
+  font-size: 1.6rem;
+  font-family: 'Noto Sans', sans-serif;
   background: var(--primary-color);
   color: white;
-  font-size: 1.6rem;
 }
 
 #header { 
@@ -285,6 +286,10 @@ h2>span {
   color: var(--secondary-color);
 }
 
+#why-us p {
+  font-size: 1.8rem;
+}
+
 .over50 {
   background-color: var(--secondary-color);
   color: white;
@@ -294,6 +299,8 @@ h2>span {
 
 .over50 h2 {
   margin-bottom: .5em;
+  line-height: 1.2;
+  font-size: 2rem;
 }
 
 .over50 form {
