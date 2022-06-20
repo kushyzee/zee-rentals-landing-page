@@ -81,7 +81,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: 'Noto Sans', sans-serif;
-  background: var(--primary-color);
+  background: white;
   color: white;
 }
 
@@ -123,6 +123,7 @@ body {
   margin-left: .5em;
 }
 
+
 /* hide the checkbox */
 input[type="checkbox"] {
   display: none;
@@ -131,21 +132,26 @@ input[type="checkbox"] {
 #header ul {
   position: fixed;
   display: block;
-  top: 80px;
-  right: -100%;
+  top: -100%;
+  right: 0;
 
   min-height: 20vh;
-  min-width: 50vw;
+  width: 100%;
 
   background-color: var(--secondary-color);
   list-style-type: none;
 
-  transition: all .3s linear;
+  transition: all .6s linear;
 }
 
 /* this helps to show the sidebar when the checkbox (fa-bars) is checked */
 #checkbox:checked ~ nav ul {
-  right: 0;
+  top: 80px;
+}
+
+#checkbox:checked ~ .menu-btn .fa-bars:before {
+  content: "\f00d";
+  font-size: 2.5rem;
 }
 
 a {
@@ -169,12 +175,15 @@ a {
 
 /* ===== MAIN SECTION ====== */
 main {
-  margin: 6em 0 2em;
+  margin: 5em 0 2em;
+  color: white;
 }
 
 /* reserve a vehicle element */
 .reserve {
-  padding: 0 1em;
+  padding: 2em 1em 0;
+  /* margin-top: -1em; */
+  background-color: var(--primary-color);
 }
 
 main h2 {
@@ -333,13 +342,36 @@ h2>span {
   width: 100%;
   border: none;
   border-bottom: 1px solid white;
-  /* padding: .5em .2em; */
 
   background-color: black;
   color: white;
   outline: none; 
 }
 
+#our-vehicles {
+  background-color: white;
+  color: var(--secondary-color);
+  padding-top: 1em;
+  margin: 0 1em;
+}
+
+.vehicle-wrapper {
+  position: relative;
+  margin-bottom: 2em;
+}
+
+#our-vehicles  a {
+  position: absolute;
+  top: 0;
+
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.8rem;
+  background-color: black;
+  padding: .7em 2em;
+  display: inline-block;
+}
 /* ====== MEDIA QUERIES */
 @media (min-width: 800px) {
   #linktwo {
