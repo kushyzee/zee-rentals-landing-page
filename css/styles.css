@@ -18,7 +18,7 @@ body {
   font-size: 1.6rem;
   font-family: 'Noto Sans', sans-serif;
   background: white;
-  color: white;
+  color: var(--primary-color);
 }
 
 #header { 
@@ -57,8 +57,8 @@ body {
   font-size: 2rem;
   cursor: pointer;
   margin-left: .5em;
+  color: white;
 }
-
 
 /* hide the checkbox */
 input[type="checkbox"] {
@@ -112,7 +112,6 @@ a {
 /* ===== MAIN SECTION ====== */
 main {
   margin: 5em 0 2em;
-  color: white;
 }
 
 /* reserve a vehicle element */
@@ -120,6 +119,7 @@ main {
   padding: 2em 1em 0;
   /* margin-top: -1em; */
   background-color: var(--primary-color);
+  color: white;
 }
 
 main h2 {
@@ -311,7 +311,7 @@ h2>span {
 
   color: var(--secondary-color);
   background-color: white;
-  box-shadow: 4px 0 6px hsla(0, 0%, 0%, .7);
+  box-shadow: 0 1px 3px hsla(0, 0%, 0%, .5);
 
   transition: all .3s linear;
 }
@@ -320,6 +320,33 @@ h2>span {
   background-color: var(--hover-color);
   color: white;
 }
+
+/* ==== RESOURCES SECTION ===== */
+#resources {
+  text-align: center;
+  margin-top: 3em;
+}
+
+#resources img {
+  margin-bottom: 1em;
+}
+
+#resources div:not(.ios-android) {
+  margin: 0 1em 1.5em;
+  box-shadow: 0 2px 6px hsla(0, 0%, 0%, .4);
+}
+
+#resources div p {
+  margin: 0 1em;
+}
+
+#resources div p:nth-of-type(1) {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 1em;
+}
+
 /* ====== MEDIA QUERIES */
 @media (min-width: 800px) {
   #linktwo {
