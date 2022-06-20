@@ -195,14 +195,16 @@ h2>span {
   background-color: white;
   color: black;
 
-  transition: all .2s linear;
+  transition: all .1s linear;
 } 
 
-.reserve-btn:hover {
-  transform: scale(.96);
-  background-color: transparent;
-  color: white;
+/* included the buttons in the #why-us, #resources and #our-vehicle sections */
+.reserve-btn:hover, .over50 button[type="submit"]:hover,
+#resources a:hover,
+#our-vehicles a:hover {
   cursor: pointer;
+  transform: scale(1.1);
+  opacity: .7;
 }
 
 
@@ -223,7 +225,7 @@ h2>span {
 #why-us h1 {
   margin-bottom: .8em;
   
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 700;
   line-height: 1.2;
   text-align: center;
@@ -265,13 +267,7 @@ h2>span {
   color: white;
   background-color: transparent;
 
-  transition: all .3s linear;
-}
-
-.over50 button[type="submit"]:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-  opacity: .5;
+  transition: all .1s linear;
 }
 
 #location-search {
@@ -301,8 +297,8 @@ h2>span {
 }
 
 #our-vehicles  a {
-  padding: .7em 2em;
-  margin-top: -25px;
+  padding: .5em 1.5em;
+  margin-top: -20px;
   margin-bottom: 2em;
 
   text-align: center;
@@ -316,15 +312,10 @@ h2>span {
   transition: all .3s linear;
 }
 
-#our-vehicles a:hover {
-  background-color: var(--hover-color);
-  color: white;
-}
-
 /* ==== RESOURCES SECTION ===== */
 #resources {
   text-align: center;
-  margin-top: 3em;
+  margin-top: 2em;
 }
 
 #resources img {
@@ -345,6 +336,26 @@ h2>span {
   font-weight: 600;
   color: var(--primary-color);
   margin-bottom: 1em;
+}
+
+#resources a {
+  display: inline-block;
+
+  border-radius: 10px;
+  margin: 2em 0;
+  padding: .5em 1.2em;
+
+  font-weight: 500;
+  
+  color: white;
+  background-color: var(--secondary-color);
+  transition: all .1s linear;
+}
+
+.ios-android {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 /* ====== MEDIA QUERIES */
