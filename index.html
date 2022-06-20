@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/styles.css">
     <script src="https://kit.fontawesome.com/d4de644c55.js" crossorigin="anonymous"></script>
     <title>Zee rentals</title>
@@ -19,8 +20,7 @@
             <input type="checkbox" name="checkbox" id="checkbox">
             <label class="menu-btn" for="checkbox"><i class="fa-solid fa-bars"></i></label>
 
-
-        <nav id="nav-bar">
+            <nav id="nav-bar">
             <ul>
                 <li><a href="#why-us" class="nav-link">Why us</a></li>
                 <li><a href="#our-vehicles" class="nav-link">Our vehicles</a></li>
@@ -156,15 +156,15 @@
                     <h2>MEET THE FLEET</h2>
                     <div>
                         <img src="./images/luxury.jpg" alt="luxurious cars" loading="lazy" >
-                        <a href="#">Luxury</a>
+                        <div class="car-name"><a href="#">Luxury</a></div>
                     </div>
                     <div class="vehicle-wrapper">
                         <img src="./images/suv.jpg" alt="suv" loading="lazy">
-                        <a href="#">SUVs</a>
+                        <div class="car-name"><a href="#">SUVs</a></div>
                     </div>
                     <div class="vehicle-wrapper">
                         <img src="./images/truck.jpg" alt="trucks" loading="lazy">
-                        <a href="#">Trucks</a>
+                        <div class="car-name"><a href="#">Trucks</a></div>
                     </div>
                 </div>
             </section>
@@ -201,7 +201,7 @@
             </section>
             <!-- ====== DOWNLOAD SECTION ENDS ====== --->
         </main>
-
+        
         <footer>
             <p>Our online presence</p>
                 <div class="social-media">
