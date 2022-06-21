@@ -1,95 +1,39 @@
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* ==== VARIABLES ======= */
+:root {
+  --secondary-color: hsl(0, 0%, 0%);
+  --primary-color: hsl(0, 0%, 6%);
+  --hover-color: hsl(0, 0%, 15%);
+  --grey-text: hsl(0, 0%, 15%);
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
-  list-style: none;
-}
-
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* Remove all animations and transitions for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-
-
-/* ======== MAIN STYLING ============= */
+/* ======== PAGE STYLING ============= */
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding: 85px 0 0;
 }
 
 body {
-  background: black;
-  color: white;
   font-size: 1.6rem;
+  font-family: 'Noto Sans', sans-serif;
+  background: white;
+  color: var(--primary-color);
 }
 
-#header {  
-  padding: 0 1em;
-
-  background-color: hsl(0, 0%, 10%);
-  /* position: fixed;
-  top: 0;
-  left: 0; */
-}
-
-.header-wrapper {
+#header { 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   height: 80px;
+  width: 100%; 
+  padding: 0 1em;
+
+  background-color: var(--secondary-color);
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 /* The logo */
@@ -99,30 +43,51 @@ body {
 }
 
 /* The login/register button */
-.header-wrapper>a {
+#header>a {
   display: block;
   font-size: 1.8rem;
   font-weight: 500;
-  margin-left: 80px;
+  margin: 0 .8em;
+  padding-left: 1em;
+  margin-left: auto;
 }
 
 /* navbar toggle button */
 .fa-bars {
   font-size: 2rem;
-  margin: 0;
+  cursor: pointer;
+  margin-left: .5em;
+  color: white;
+}
+
+/* hide the checkbox */
+input[type="checkbox"] {
+  display: none;
 }
 
 #header ul {
   position: fixed;
   display: block;
-  top: 80px;
+  top: -100%;
   right: 0;
 
-  height: 100vh;
-  min-width: 50vw;
+  min-height: 20vh;
+  width: 100%;
 
-  background-color: hsl(0, 0%, 10%);
+  background-color: var(--secondary-color);
   list-style-type: none;
+
+  transition: all .6s linear;
+}
+
+/* this helps to show the sidebar when the checkbox (fa-bars) is checked */
+#checkbox:checked ~ nav ul {
+  top: 80px;
+}
+
+#checkbox:checked ~ .menu-btn .fa-bars:before {
+  content: "\f00d";
+  font-size: 2.5rem;
 }
 
 a {
@@ -140,14 +105,317 @@ a {
 }
 
 #header li a:hover {
-  background-color: hsl(0, 0%, 15%);
+  background-color: var(--hover-color);
   border-radius: 10px;
 }
 
+/* ===== MAIN SECTION ====== */
 main {
-  margin-top: 2rem;
+  margin: 5em 0 2em;
 }
 
+/* reserve a vehicle element */
+.reserve {
+  padding: 2em 1em 0;
+  /* margin-top: -1em; */
+  background-color: var(--primary-color);
+  color: white;
+}
+
+main h2 {
+  margin-bottom: 1em;
+  
+  text-align: center;
+  font-size: 2.2rem;
+  line-height: 1.4;
+}
+
+h2>span {
+  display: block;
+  font-size: 1.4rem;
+}
+
+/* ENTER LOCATION INPUT */
+#location {
+  width: 100%;
+  margin-bottom: 1em;
+  border: none;
+  border-bottom: 1px solid white;
+
+  background-color: transparent;
+  color: hsl(255, 100%, 95%);
+}
+
+/* TARGETING ALL INPUTS IN THE RESERVE A VEHICLE FORM EXCEPT THE SHOW OFFERS BUTTON */
+.reserve-form input:not(.reserve-btn), .reserve-form select {
+  margin: .5em 0 1.2em;
+  border-radius: 5px;
+  border-bottom: 1px solid white;
+  
+  min-height: 30px;
+  outline: none;
+  /* text-align: center; */
+
+  background-color: black;
+  color: hsl(255, 100%, 95%);
+}
+
+/* PICKUP DATE AND TIME, RETURN DATE AND TIME WRAPPERS */
+.pickup-date, .return-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2em;
+}
+
+/* ALIGNING THE LABEL AND INPUT FOR PICKUP/RETURN DATE AND TIME VERTICALLY */
+.pickup-date div, .return-date div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* .RESERVE-BTN WRAPPER */
+.btn-wrapper {
+  display: flex;
+  place-items: center;
+}
+
+/* SHOW OFFERS BUTTON */
+.reserve-btn {
+  margin-bottom: 4em;
+  margin: 1em auto 4em;
+  padding: .4em 1em;
+  border: 1px solid white;
+  border-radius: 10px;
+
+  text-align: center;
+  font-weight: 600;
+
+  background-color: white;
+  color: black;
+
+  transition: all .1s linear;
+} 
+
+/* included the buttons in the #why-us, #resources and #our-vehicle sections */
+.reserve-btn:hover, .over50 button[type="submit"]:hover,
+#resources a:hover,
+#our-vehicles a:hover, #submit:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  opacity: .7;
+}
+
+
+/* STYLING FOR THE WHY US SECTION STARTS */
+#why-us {
+  padding: 1em 1em 0;
+  margin-bottom: 3em;
+  background-color: white;
+  color: var(--grey-text);
+}
+
+#video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 1.5em;
+}
+
+#why-us h1 {
+  margin-bottom: .8em;
+  
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+
+  color: var(--secondary-color);
+}
+
+#why-us p {
+  font-size: 1.8rem;
+}
+
+.over50 {
+  background-color: var(--secondary-color);
+  color: white;
+  margin: 0 -1em;
+  padding: 2em;
+}
+
+.over50 h2 {
+  margin-bottom: .5em;
+  line-height: 1.2;
+  font-size: 2rem;
+}
+
+.over50 form {
+  display: flex;
+  padding-bottom: 1em;
+}
+
+/* SEARCH BUTTON WITH THE ICON */
+.over50 button[type="submit"] {
+  display: flex;
+  padding: .1em .5em;
+  border: none;
+  outline: none;
+
+  font-size: 2rem;
+  color: white;
+  background-color: transparent;
+
+  transition: all .1s linear;
+}
+
+#location-search {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid white;
+  padding: 0 .2em .2em;
+
+  background-color: black;
+  color: white;
+  outline: none; 
+}
+
+#our-vehicles {
+  background-color: white;
+  color: var(--secondary-color);
+  padding-top: 1em;
+  margin: 0 1em;
+}
+
+.vehicle-wrapper {
+  margin-bottom: 2rem;
+}
+
+.car-name {
+  display: flex;
+  justify-content: center;
+}
+
+#our-vehicles  a {
+  padding: .5em 1.5em;
+  margin-top: -20px;
+  margin-bottom: 2em;
+
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.8rem;
+
+  color: var(--secondary-color);
+  background-color: white;
+  box-shadow: 0 1px 3px hsla(0, 0%, 0%, .5);
+
+  transition: all .3s linear;
+}
+
+/* ==== RESOURCES SECTION ===== */
+#resources {
+  text-align: center;
+  margin-top: 2em;
+}
+
+#resources img {
+  margin-bottom: 1em;
+}
+
+#resources div:not(.ios-android, .resources-form) {
+  margin: 0 1em 1.5em;
+  box-shadow: 0 2px 6px hsla(0, 0%, 0%, .4);
+}
+
+#resources div p {
+  margin: 0 1em;
+}
+
+#resources div p:nth-of-type(1) {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 1em;
+}
+
+#resources a {
+  display: inline-block;
+
+  border-radius: 10px;
+  margin: 2em 0;
+  padding: .5em 1.2em;
+
+  font-weight: 500;
+  
+  color: white;
+  background-color: var(--secondary-color);
+  transition: all .1s linear;
+}
+
+.ios-android {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.resources-form {
+  padding: 1em 0 2em;
+  margin: 0 1em;
+}
+
+#resources form {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1em;
+}
+
+#resources input {
+  display: inline-block;
+}
+
+#resources input:not(#submit) {
+  width: 100%;
+  border: 1px solid var(--secondary-color);
+  padding-left: .5em;
+  outline: none;
+}
+
+#submit {
+  padding: .3em 1em;
+  display: inline-block;
+
+  border-radius: 10px;
+  border: none;
+
+  font-weight: 500;
+  
+  color: white;
+  background-color: var(--secondary-color);
+  transition: all .1s linear;
+}
+
+footer {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 1em;
+}
+
+footer p {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.social-media {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.social-media i {
+  display: inline-block;
+  margin-left: .5em;
+  margin-bottom: 1.5em;
+}
 
 /* ====== MEDIA QUERIES */
 @media (min-width: 800px) {

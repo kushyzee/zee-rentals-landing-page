@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/styles.css">
     <script src="https://kit.fontawesome.com/d4de644c55.js" crossorigin="anonymous"></script>
     <title>Zee rentals</title>
@@ -11,17 +15,16 @@
 <body>
     <!-- ===== HEADER SECTION ====== -->
     <header id="header">
-        <div class="header-wrapper">
             <img src="./images/logo.svg" alt="logo" id="header-img">
             <a href="#"><i class="fa-solid fa-circle-user"></i> Log in/register</a>
             <input type="checkbox" name="checkbox" id="checkbox">
-            <label for="checkbox"><i class="fa-solid fa-bars"></i></label>
-        </div>
-        <nav id="nav-bar">
+            <label class="menu-btn" for="checkbox"><i class="fa-solid fa-bars"></i></label>
+
+            <nav id="nav-bar">
             <ul>
                 <li><a href="#why-us" class="nav-link">Why us</a></li>
                 <li><a href="#our-vehicles" class="nav-link">Our vehicles</a></li>
-                <li><a href="#download" class="nav-link">Download app</a></li>
+                <li><a href="#resources" class="nav-link">Resources</a></li>
             </ul>
         </nav>
     </header>
@@ -29,90 +32,98 @@
         <!-- ===== MAIN SECTION ====== -->
         <main>
             <!-- ===== RESERVE VEHICLE SECTION STARTS ====== -->
-            <section>
+            <section class="reserve">
                 <h2>Reserve a vehicle <span>(Time limit between 8:00 AM and 10:00 PM)</span></h2>
-                <form action="#" method="post">
+                <form class="reserve-form" action="#" method="post">
                     <input type="search" name="location" id="location" placeholder="Enter location">
                     <div class="pickup-date">
-                        <label for="pickup">Pickup date</label>
-                        <input type="date" name="pickup" id="pickup">
+                        <div>
+                            <label for="pickup">Pickup date:</label>
+                            <input type="date" name="pickup" id="pickup">
+                        </div>
 
                         <!-- ====== PICKUP TIME SECTION START ======= -->
-                        <label for="time">Time</label>
-                        <select name="pickup-time" id="pickup-time">
-                            <option value="8:00 AM">08:00 AM</option>
-                            <option value="8:30 AM">08:30 AM</option>
-                            <option value="9:00 AM">09:00 AM</option>
-                            <option value="9:30 AM">09:30 AM</option>
-                            <option value="10:00 AM">10:00 AM</option>
-                            <option value="10:30 AM">10:30 AM</option>
-                            <option value="11:00 AM">11:00 AM</option>
-                            <option value="11:30 AM">11:30 AM</option>
-                            <option value="12:00 PM">12:00 PM</option>
-                            <option value="12:30 PM">12:30 PM</option>
-                            <option value="1:00 PM">01:00 PM</option>
-                            <option value="1:30 PM">01:30 PM</option>
-                            <option value="2:00 PM">02:00 PM</option>
-                            <option value="2:30 PM">02:30 PM</option>
-                            <option value="3:00 PM">03:00 PM</option>
-                            <option value="3:30 PM">03:30 PM</option>
-                            <option value="4:00 PM">04:00 PM</option>
-                            <option value="4:30 PM">04:30 PM</option>
-                            <option value="5:00 PM">05:00 PM</option>
-                            <option value="5:30 PM">05:30 PM</option>
-                            <option value="6:00 PM">06:00 PM</option>
-                            <option value="6:30 PM">06:30 PM</option>
-                            <option value="7:00 PM">07:00 PM</option>
-                            <option value="7:00 PM">07:30 PM</option>
-                            <option value="7:00 PM">08:00 PM</option>
-                            <option value="7:00 PM">08:30 PM</option>
-                            <option value="7:00 PM">09:00 PM</option>
-                            <option value="7:00 PM">09:30 PM</option>
-                            <option value="7:00 PM">10:00 PM</option>
-                        </select>
-                        <!-- ====== PICKUP TIME SECTION START ======= -->
+                        <div>
+                            <label for="time">Time:</label>
+                            <select name="pickup-time" id="pickup-time">
+                                <option value="8:00 AM">08:00 AM</option>
+                                <option value="8:30 AM">08:30 AM</option>
+                                <option value="9:00 AM">09:00 AM</option>
+                                <option value="9:30 AM">09:30 AM</option>
+                                <option value="10:00 AM">10:00 AM</option>
+                                <option value="10:30 AM">10:30 AM</option>
+                                <option value="11:00 AM">11:00 AM</option>
+                                <option value="11:30 AM">11:30 AM</option>
+                                <option value="12:00 PM">12:00 PM</option>
+                                <option value="12:30 PM">12:30 PM</option>
+                                <option value="1:00 PM">01:00 PM</option>
+                                <option value="1:30 PM">01:30 PM</option>
+                                <option value="2:00 PM">02:00 PM</option>
+                                <option value="2:30 PM">02:30 PM</option>
+                                <option value="3:00 PM">03:00 PM</option>
+                                <option value="3:30 PM">03:30 PM</option>
+                                <option value="4:00 PM">04:00 PM</option>
+                                <option value="4:30 PM">04:30 PM</option>
+                                <option value="5:00 PM">05:00 PM</option>
+                                <option value="5:30 PM">05:30 PM</option>
+                                <option value="6:00 PM">06:00 PM</option>
+                                <option value="6:30 PM">06:30 PM</option>
+                                <option value="7:00 PM">07:00 PM</option>
+                                <option value="7:00 PM">07:30 PM</option>
+                                <option value="7:00 PM">08:00 PM</option>
+                                <option value="7:00 PM">08:30 PM</option>
+                                <option value="7:00 PM">09:00 PM</option>
+                                <option value="7:00 PM">09:30 PM</option>
+                                <option value="7:00 PM">10:00 PM</option>
+                            </select>
+                        </div>
+                        <!-- ====== PICKUP TIME SECTION END ======= -->
                     </div>
 
                     <div class="return-date">
-                        <label for="return">Return date</label>
-                        <input type="date" name="return" id="return">
+                        <div>
+                            <label for="return">Return date:</label>
+                            <input type="date" name="return" id="return">
+                        </div>
 
                         <!-- ====== RETURN TIME SECTION START ======= -->
-                        <label for="time">time</label>
-                        <select name="return-time" id="return-time">
-                            <option value="8:00 AM">08:00 AM</option>
-                            <option value="8:30 AM">08:30 AM</option>
-                            <option value="9:00 AM">09:00 AM</option>
-                            <option value="9:30 AM">09:30 AM</option>
-                            <option value="10:00 AM">10:00 AM</option>
-                            <option value="10:30 AM">10:30 AM</option>
-                            <option value="11:00 AM">11:00 AM</option>
-                            <option value="11:30 AM">11:30 AM</option>
-                            <option value="12:00 PM">12:00 PM</option>
-                            <option value="12:30 PM">12:30 PM</option>
-                            <option value="1:00 PM">01:00 PM</option>
-                            <option value="1:30 PM">01:30 PM</option>
-                            <option value="2:00 PM">02:00 PM</option>
-                            <option value="2:30 PM">02:30 PM</option>
-                            <option value="3:00 PM">03:00 PM</option>
-                            <option value="3:30 PM">03:30 PM</option>
-                            <option value="4:00 PM">04:00 PM</option>
-                            <option value="4:30 PM">04:30 PM</option>
-                            <option value="5:00 PM">05:00 PM</option>
-                            <option value="5:30 PM">05:30 PM</option>
-                            <option value="6:00 PM">06:00 PM</option>
-                            <option value="6:30 PM">06:30 PM</option>
-                            <option value="7:00 PM">07:00 PM</option>
-                            <option value="7:00 PM">07:30 PM</option>
-                            <option value="7:00 PM">08:00 PM</option>
-                            <option value="7:00 PM">08:30 PM</option>
-                            <option value="7:00 PM">09:00 PM</option>
-                            <option value="7:00 PM">09:30 PM</option>
-                            <option value="7:00 PM">10:00 PM</option>
-                        </select>
+                        <div>
+                            <label for="time">Time:</label>
+                            <select name="return-time" id="return-time">
+                                <option value="8:00 AM">08:00 AM</option>
+                                <option value="8:30 AM">08:30 AM</option>
+                                <option value="9:00 AM">09:00 AM</option>
+                                <option value="9:30 AM">09:30 AM</option>
+                                <option value="10:00 AM">10:00 AM</option>
+                                <option value="10:30 AM">10:30 AM</option>
+                                <option value="11:00 AM">11:00 AM</option>
+                                <option value="11:30 AM">11:30 AM</option>
+                                <option value="12:00 PM">12:00 PM</option>
+                                <option value="12:30 PM">12:30 PM</option>
+                                <option value="1:00 PM">01:00 PM</option>
+                                <option value="1:30 PM">01:30 PM</option>
+                                <option value="2:00 PM">02:00 PM</option>
+                                <option value="2:30 PM">02:30 PM</option>
+                                <option value="3:00 PM">03:00 PM</option>
+                                <option value="3:30 PM">03:30 PM</option>
+                                <option value="4:00 PM">04:00 PM</option>
+                                <option value="4:30 PM">04:30 PM</option>
+                                <option value="5:00 PM">05:00 PM</option>
+                                <option value="5:30 PM">05:30 PM</option>
+                                <option value="6:00 PM">06:00 PM</option>
+                                <option value="6:30 PM">06:30 PM</option>
+                                <option value="7:00 PM">07:00 PM</option>
+                                <option value="7:00 PM">07:30 PM</option>
+                                <option value="7:00 PM">08:00 PM</option>
+                                <option value="7:00 PM">08:30 PM</option>
+                                <option value="7:00 PM">09:00 PM</option>
+                                <option value="7:00 PM">09:30 PM</option>
+                                <option value="7:00 PM">10:00 PM</option>
+                            </select>
+                        </div>
                         <!-- ====== RETURN TIME SECTION END ======= -->
                     </div>
-                    <input type="submit" value="Show offers">
+                    <div class="btn-wrapper"><input class="reserve-btn" type="submit" value="Show offers"></div>
                 </form>
             </section>
             <!-- RESERVE VEHICLE SECTION END ======= -->
@@ -120,7 +131,7 @@
             <!-- ===== WHY US SECTION STARTS ========= -->
             <section id="why-us">
                 <div>
-                    <iframe width="60%" height="315" id="video" src="https://www.youtube.com/embed/Gh6d6YWmEx4" title="YouTube video player"
+                    <iframe loading="lazy" id="video" src="https://www.youtube.com/embed/Gh6d6YWmEx4" title="YouTube video player"
                         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                         <h1>CAR RENTAL AROUND THE WORLD</h1>
@@ -129,11 +140,11 @@
                         mobility needs.</p>
                         <a href="#" class="button">Book Now</a>
                 </div>
-                <div>
+                <div class="over50">
                     <h2>Over 50 countries worldwide</h2>
                     <form action="#" method="post">
                         <input type="search" name="location-search" id="location-search" placeholder="search for a location">
-                        <input type="submit" value="Search">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </form>
                 </div>
             </section>
@@ -141,56 +152,61 @@
             
             <!-- ======= MEET THE FLEET STARTS ====== -->
             <section id="our-vehicles">
-                <div>
+                <div class="vehicle-wrapper">
                     <h2>MEET THE FLEET</h2>
                     <div>
-                        <img src="./images/luxury.jpg" alt="luxurious cars">
-                        <p>Luxury</p>
+                        <img src="./images/luxury.jpg" alt="luxurious cars" loading="lazy" >
+                        <div class="car-name"><a href="#">Luxury</a></div>
                     </div>
-                    <div>
-                        <img src="./images/suv.jpg" alt="suv">
-                        <p>SUVs</p>
+                    <div class="vehicle-wrapper">
+                        <img src="./images/suv.jpg" alt="suv" loading="lazy">
+                        <div class="car-name"><a href="#">SUVs</a></div>
                     </div>
-                    <div>
-                        <img src="./images/truck.jpg" alt="trucks">
-                        <p>Trucks</p>
+                    <div class="vehicle-wrapper">
+                        <img src="./images/truck.jpg" alt="trucks" loading="lazy">
+                        <div class="car-name"><a href="#">Trucks</a></div>
                     </div>
                 </div>
             </section>
+
             <!-- ====== MEET THE FLEET ENDS ====== -->
 
-            <!-- ====== DOWNLOAD SECTION STARTS ======  -->
-            <section id="download">
+            <!-- ====== RESOURCES SECTION STARTS ======  -->
+            <section id="resources">
+                <h2>RESOURCES</h2>
                 <div>
-                    <img src="./images/app.jpg" alt="download app">
+                    <img src="./images/app.jpg" alt="download app" loading="lazy">
                     <h3>DOWNLOAD</h3>
                     <p>Zee Rentals App</p>
                     <p>Our iOS and Android apps make it easier than ever to manage reservations on the go.</p>
-                    <div>
+                    <div class="ios-android">
                         <a href="#"><i class="fa-brands fa-apple"></i>iOS</a>
                         <a href="#">Android</a>
                     </div>
                 </div>
                 <div>
-                    <img src="./images/team.jpg" alt="The team">
+                    <img src="./images/team.jpg" alt="The team" loading="lazy">
                     <h3>MEET</h3>
                     <p>Our Team</p>
                     <p>Every day at Zee rentals is different. We care about what our customers think and how they feel.</p>
                     <a href="#">Learn More</a>
                 </div>
                 <div>
-                    <img src="./images/subscribe.jpg" alt="The team">
+                    <img src="./images/subscribe.jpg" alt="The team" loading="lazy">
                     <h3>SUBSCRIBE</h3>
                     <p>For Exclusive Offers</p>
-                    <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
-                        <input type="email" name="email" id="email" placeholder="your email">
-                        <input id="submit" type="submit" value="submit">
-                    </form>
+                    <p>Get discounts and exclusive offers when you subscribe to our email list</p>
+                    <div class="resources-form">
+                        <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
+                            <input type="email" name="email" id="email" placeholder="your email">
+                            <input id="submit" type="submit" value="submit">
+                        </form>
+                    </div>
                 </div>
             </section>
-            <!-- ====== DOWNLOAD SECTION ENDS ====== --->
+            <!-- ====== RESOURCES SECTION ENDS ====== --->
         </main>
-
+        
         <footer>
             <p>Our online presence</p>
                 <div class="social-media">
