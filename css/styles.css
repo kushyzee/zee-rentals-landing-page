@@ -411,14 +411,10 @@ footer p {
   font-size: 2rem;
 }
 
-.social-media i {
+.social-media a {
   display: inline-block;
   margin-left: .5em;
   margin-bottom: 1.5em;
-}
-
-.social-media a {
-  display: block;
 }
 
 /* ====== MEDIA QUERIES */
