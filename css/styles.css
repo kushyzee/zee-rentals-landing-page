@@ -417,6 +417,10 @@ footer p {
   margin-bottom: 1.5em;
 }
 
+.social-media a {
+  display: block;
+}
+
 /* ====== MEDIA QUERIES */
 @media (min-width: 800px) {
   #linktwo {
