@@ -127,10 +127,16 @@ main h2 {
   margin-bottom: 1em;
   
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 2rem;
+  font-weight: 700;
   line-height: 1.4;
+
+  color: var(--primary-color);
 }
 
+.reserve h2 {
+  color: white;
+}
 h2>span {
   display: block;
   font-size: 1.4rem;
@@ -252,6 +258,7 @@ h2>span {
   margin-bottom: .5em;
   line-height: 1.2;
   font-size: 2rem;
+  color: var(--button-color);
 }
 
 .over50 form {
@@ -267,7 +274,7 @@ h2>span {
   outline: none;
 
   font-size: 2rem;
-  color: white;
+  color: var(--button-color);
   background-color: transparent;
 
   transition: all .1s linear;
@@ -276,7 +283,7 @@ h2>span {
 #location-search {
   width: 100%;
   border: none;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--button-color);
   padding: 0 .2em .2em;
 
   background-color: black;
@@ -299,13 +306,14 @@ h2>span {
   padding: .5em 1.5em;
   margin-top: -20px;
   margin-bottom: 2em;
+  border-radius: 30px;
 
   text-align: center;
   font-weight: 600;
   font-size: 1.8rem;
 
-  color: var(--secondary-color);
-  background-color: white;
+  color: white;
+  background-color: var(--button-color);
   box-shadow: 0 1px 3px hsla(0, 0%, 0%, .5);
 
   transition: all .3s linear;
@@ -339,21 +347,21 @@ hr {
 #resources div p:nth-of-type(1) {
   font-size: 2rem;
   font-weight: 600;
-  color: var(--primary-color);
+  color: var(--button-color);
   margin-bottom: 1em;
 }
 
 #resources a {
   display: inline-block;
 
-  border-radius: 10px;
+  border-radius: 30px;
   margin: 2em 0;
   padding: .5em 1.2em;
 
   font-weight: 500;
   
   color: white;
-  background-color: var(--secondary-color);
+  background-color: var(--button-color);
   transition: all .1s linear;
 }
 
@@ -393,9 +401,9 @@ hr {
 
 #resources input:not(#submit) {
   width: 100%;
-  border: 1px solid var(--secondary-color);
-  border-radius: 10px;
-  padding-left: .5em;
+  border: 1px solid var(--primary-color);
+  border-radius: 30px;
+  padding-left: .7em;
   outline: none;
 }
 
@@ -403,13 +411,13 @@ hr {
   padding: .3em 1em;
   display: inline-block;
 
-  border-radius: 10px;
+  border-radius: 30px;
   border: none;
 
   font-weight: 500;
   
   color: white;
-  background-color: var(--secondary-color);
+  background-color: var(--button-color);
   transition: all .1s linear;
 }
 
@@ -432,12 +440,26 @@ footer {
   margin-bottom: 1.5em;
 }
 
+.social-media a:hover {
+  font-size: 2.2rem;
+  color: var(--button-color);
+}
+
 .nav-one, .nav-two {
   display: flex;
   gap: 2em;
   justify-content: center;
   font-size: 1.3rem;
   line-height: 20px;
+}
+
+.nav-one a, .nav-two a {
+  color: var(--button-color);
+}
+
+.nav-one a:hover,
+.nav-two a:hover {
+  opacity: .7;
 }
 
 #copyright {
@@ -451,7 +473,7 @@ footer {
 @media (min-width: 600px) {
   #header {
       display: grid;
-      grid-template-columns: 20% 50% 30%;
+      grid-template-columns: 10% 60% 30%;
       justify-items: start;
   
       width: 100%;
@@ -472,9 +494,11 @@ footer {
     margin: 0;
     padding: .2em .8em;
     border-radius: 30px;
+    font-size: 1.6rem;
 
     background-color: var(--button-color);
   }
+
 
     #header ul {
       position: static;
