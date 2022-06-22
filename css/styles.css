@@ -15,6 +15,7 @@ html {
 }
 
 body {
+  min-width: 320px;
   font-size: 1.6rem;
   font-family: 'Noto Sans', sans-serif;
   background: white;
@@ -283,12 +284,7 @@ h2>span {
 #our-vehicles {
   background-color: white;
   color: var(--secondary-color);
-  padding-top: 1em;
   margin: 0 1em;
-}
-
-.vehicle-wrapper {
-  /* margin-bottom: 1.5rem; */
 }
 
 .car-name {
@@ -361,11 +357,18 @@ hr {
 .ios-android {
   display: flex;
   width: 100%;
-  justify-content: space-evenly;
+  padding: 0 1.5em;
+  gap: 1em;
+  justify-content: space-between;
+}
+
+.ios-android a {
+  width: 100%;
+  font-size: 1.4rem;
 }
 
 .fa-android, .fa-apple {
-  margin-right: .3em;
+  margin-right: .5em;
   font-size: 1.8rem;
 }
 
@@ -388,6 +391,7 @@ hr {
 #resources input:not(#submit) {
   width: 100%;
   border: 1px solid var(--secondary-color);
+  border-radius: 10px;
   padding-left: .5em;
   outline: none;
 }
