@@ -1,9 +1,10 @@
 /* ==== VARIABLES ======= */
 :root {
   --secondary-color: hsl(0, 0%, 0%);
-  --primary-color: hsl(0, 0%, 6%);
+  --primary-color: hsl(0, 0%, 7%);
+  --button-color: hsl(356, 81%, 34%);
   --hover-color: hsl(0, 0%, 15%);
-  --grey-text: hsl(0, 0%, 15%);
+  --grey-text: hsl(0, 0%, 16%);
 }
 
 /* ======== PAGE STYLING ============= */
@@ -49,7 +50,7 @@ body {
   font-size: 1.8rem;
   font-weight: 500;
   margin: 0 .8em;
-  padding-left: 1em;
+
   margin-left: auto;
 }
 
@@ -107,7 +108,7 @@ a {
 
 #header li a:hover {
   background-color: var(--hover-color);
-  border-radius: 10px;
+  border-radius: 30px;
 }
 
 /* ===== MAIN SECTION ====== */
@@ -141,6 +142,7 @@ h2>span {
   margin-bottom: 1em;
   border: none;
   border-bottom: 1px solid white;
+  border-radius: 5px;
 
   background-color: transparent;
   color: hsl(255, 100%, 95%);
@@ -149,16 +151,18 @@ h2>span {
 /* TARGETING ALL INPUTS IN THE RESERVE A VEHICLE FORM EXCEPT THE SHOW OFFERS BUTTON */
 .reserve-form input:not(.reserve-btn), .reserve-form select {
   margin: .5em 0 1.2em;
-  border-radius: 5px;
+  padding-left: .3em;
+  border-radius: 30px;
   border-bottom: 1px solid white;
   
   min-height: 30px;
   outline: none;
   /* text-align: center; */
 
-  background-color: black;
+  background-color: var(--primary-color);
   color: hsl(255, 100%, 95%);
 }
+
 
 /* PICKUP DATE AND TIME, RETURN DATE AND TIME WRAPPERS */
 .pickup-date, .return-date {
@@ -185,15 +189,15 @@ h2>span {
 .reserve-btn {
   margin-bottom: 4em;
   margin: 1em auto 4em;
-  padding: .4em 1em;
-  border: 1px solid white;
-  border-radius: 10px;
+  padding: .6em 1em;
+  border: none;
+  border-radius: 30px;
 
   text-align: center;
   font-weight: 600;
 
-  background-color: white;
-  color: black;
+  background-color: var(--button-color);
+  color: inherit;
 
   transition: all .1s linear;
 } 
@@ -230,7 +234,7 @@ h2>span {
   line-height: 1.2;
   text-align: center;
 
-  color: var(--secondary-color);
+  color: var(--button-color);
 }
 
 #why-us p {
@@ -448,13 +452,15 @@ footer {
   #header {
       display: grid;
       grid-template-columns: 20% 50% 30%;
-      place-items: space-between;
+      justify-items: start;
   
       width: 100%;
       padding: 0 1em;
 
       background-color: var(--secondary-color);
-      position: static;
+      position: fixed;
+      top: o;
+      left: 0;
     }
 
 /* The login/register button */
@@ -464,19 +470,26 @@ footer {
     grid-row: 1;
     justify-self: end;
     margin: 0;
-    padding: 0;
+    padding: .2em .8em;
+    border-radius: 30px;
+
+    background-color: var(--button-color);
   }
 
     #header ul {
       position: static;
       display: flex;
-      gap: .5em;
       grid-column: 2 / 3;
       grid-row: 1;
       
       padding-bottom: 0;
   
       background-color: initial; 
+    }
+
+    #header ul li a:hover {
+      /* background-color: var(--button-color); */
+      border-radius: 30px;
     }
 
     .menu-btn {
@@ -486,12 +499,9 @@ footer {
 /* navbar links */
     #header li a {
       margin: 0;
-      padding: 0 .5em;
+      padding: 0 .6em;
       line-height: 40px;
     }
 
 /* ===== MAIN SECTION ====== */
-main {
-  margin: 0;
-}
 }
