@@ -288,7 +288,7 @@ h2>span {
 }
 
 .vehicle-wrapper {
-  margin-bottom: 2rem;
+  /* margin-bottom: 1.5rem; */
 }
 
 .car-name {
@@ -310,6 +310,12 @@ h2>span {
   box-shadow: 0 1px 3px hsla(0, 0%, 0%, .5);
 
   transition: all .3s linear;
+}
+
+hr {
+  opacity: .2;
+  /* margin: 0 1em; */
+  border: 1px solid grey;
 }
 
 /* ==== RESOURCES SECTION ===== */
@@ -356,6 +362,11 @@ h2>span {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
+}
+
+.fa-android, .fa-apple {
+  margin-right: .3em;
+  font-size: 1.8rem;
 }
 
 .resources-form {
