@@ -707,6 +707,10 @@ footer {
   font-size: 2.4rem;
 }
 
+.video-flex {
+  gap: 2.5em;
+}
+
 .over50 {
   margin: 0 -5em;
   padding: 4em 5em;
