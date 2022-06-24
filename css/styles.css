@@ -2,7 +2,8 @@
 :root {
   --secondary-color: hsl(0, 0%, 0%);
   --primary-color: hsl(0, 0%, 7%);
-  --button-color: hsl(356, 81%, 34%);
+  --darkred: hsl(356, 81%, 34%);
+  --lightred: hsl(0, 84%, 70%);
   --hover-color: hsl(0, 0%, 15%);
   --grey-text: hsl(0, 0%, 16%);
 }
@@ -44,14 +45,18 @@ body {
   align-self: center; 
 }
 
+/* container for the login button and navbar elements */
+.reorder {
+  display: flex;
+  align-items: flex-end;
+}
+
 /* The login/register button */
-#header>a {
+.reorder>a {
   display: block;
   font-size: 1.8rem;
   font-weight: 500;
-  margin: 0 .8em;
-
-  margin-left: auto;
+  margin-right: 1em;
 }
 
 /* navbar toggle button */
@@ -67,7 +72,7 @@ input[type="checkbox"] {
   display: none;
 }
 
-#header ul {
+.reorder ul {
   position: fixed;
   display: block;
   top: -100%;
@@ -202,7 +207,7 @@ h2>span {
   text-align: center;
   font-weight: 600;
 
-  background-color: var(--button-color);
+  background-color: var(--darkred);
   color: inherit;
 
   transition: all .1s linear;
@@ -240,7 +245,7 @@ h2>span {
   line-height: 1.2;
   text-align: center;
 
-  color: var(--button-color);
+  color: var(--darkred);
 }
 
 #why-us p {
@@ -251,14 +256,14 @@ h2>span {
   background-color: var(--secondary-color);
   color: white;
   margin: 0 -1em;
-  padding: 2em;
+  padding: 3.5em 2em;
 }
 
 .over50 h2 {
   margin-bottom: .5em;
   line-height: 1.2;
   font-size: 2rem;
-  color: var(--button-color);
+  color: var(--lightred);
 }
 
 .over50 form {
@@ -274,7 +279,7 @@ h2>span {
   outline: none;
 
   font-size: 2rem;
-  color: var(--button-color);
+  color: var(--lightred);
   background-color: transparent;
 
   transition: all .1s linear;
@@ -283,7 +288,7 @@ h2>span {
 #location-search {
   width: 100%;
   border: none;
-  border-bottom: 1px solid var(--button-color);
+  border-bottom: 1px solid var(--lightred);
   padding: 0 .2em .2em;
 
   background-color: black;
@@ -321,7 +326,7 @@ h2>span {
   font-size: 1.8rem;
 
   color: white;
-  background-color: var(--button-color);
+  background-color: var(--darkred);
   box-shadow: 0 1px 3px hsla(0, 0%, 0%, .5);
 
   transition: all .3s linear;
@@ -355,7 +360,7 @@ hr {
 #resources div p:nth-of-type(1) {
   font-size: 2rem;
   font-weight: 600;
-  color: var(--button-color);
+  color: var(--darkred);
   margin-bottom: 1em;
 }
 
@@ -369,7 +374,7 @@ hr {
   font-weight: 500;
   
   color: white;
-  background-color: var(--button-color);
+  background-color: var(--darkred);
   transition: all .1s linear;
 }
 
@@ -425,7 +430,7 @@ hr {
   font-weight: 500;
   
   color: white;
-  background-color: var(--button-color);
+  background-color: var(--darkred);
   transition: all .1s linear;
 }
 
@@ -446,11 +451,11 @@ footer {
   display: inline-block;
   margin-left: .5em;
   margin-bottom: 1.5em;
+  transition: all .2s linear;
 }
 
 .social-media a:hover {
-  font-size: 2.2rem;
-  color: var(--button-color);
+  color: var(--lightred);
 }
 
 .nav-one, .nav-two {
@@ -462,12 +467,12 @@ footer {
 }
 
 .nav-one a, .nav-two a {
-  color: var(--button-color);
+  color: var(--lightred);
 }
 
 .nav-one a:hover,
 .nav-two a:hover {
-  opacity: .7;
+  opacity: .8;
 }
 
 #copyright {
@@ -481,9 +486,9 @@ footer {
 @media (min-width: 800px) {
 
   #header {
-      display: grid;
-      grid-template-columns: 30% 40% 30%;
-      justify-items: start;
+      display: flex;
+      /* grid-template-columns: 30% 40% 30%;
+      justify-items: start; */
   
       width: 100%;
       padding: 0 1em;
@@ -494,36 +499,31 @@ footer {
       left: 0;
     }
 
+/* container for the login button and navbar elements */
+  .reorder {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 1.5em;
+  }
+
 /* The login/register button */
-  #header>a {
-    display: inline-block;
-    grid-column: 3 / 4;
-    grid-row: 1;
-    justify-self: end;
+  .reorder>a {
     margin: 0;
-    padding: .2em .8em;
+    padding: .3em .8em;
     border-radius: 30px;
     font-size: 1.6rem;
 
-    background-color: var(--button-color);
+    background-color: var(--darkred);
   }
 
 
     #header ul {
       position: static;
-      display: flex;
-      grid-column: 2 / 3;
-      grid-row: 1;
-      justify-self: end;
-      
+      display: flex;   
       padding-bottom: 0;
   
       background-color: initial; 
-    }
-
-    #header ul li a:hover {
-      /* background-color: var(--button-color); */
-      border-radius: 30px;
     }
 
     .menu-btn {
@@ -533,8 +533,15 @@ footer {
 /* navbar links */
     #header li a {
       margin: 0;
-      padding: 0 .6em;
-      line-height: 40px;
+      padding: 0 1em;
+      line-height: 35px;
+      transition: all .2s linear;
+    }
+
+    #header li a:hover {
+      background-color: var(--lightred);
+      border-radius: 30px;
+      color: var(--secondary-color);
     }
 
 /* ===== MAIN SECTION ====== */
