@@ -125,13 +125,8 @@ main {
 /* reserve a vehicle section */
 .reserve {
   padding: 2em 1em 0;
-  background-color: var(--primary-color);
-  background: url(../images/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding: 2em 2em 0;
   color: white;
+  background-color: var(--primary-color);
 }
 
 main h2 {
@@ -532,6 +527,7 @@ footer {
     flex-direction: row-reverse;
     align-items: center;
     gap: 1.5em;
+    font-size: 1.8rem;
   }
 
 /* The login/register button */
@@ -539,7 +535,6 @@ footer {
     margin: 0;
     padding: .3em .8em;
     border-radius: 30px;
-    font-size: 1.6rem;
 
     background-color: var(--darkred);
   }
@@ -572,6 +567,33 @@ footer {
     }
 
 /* ===== MAIN SECTION ====== */
+/* STYLING FOR THE RESERVE A VEHICLE SECTION */
+.reserve {
+  position: relative;
+  background: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  isolation: isolate;
+  padding: 2em 2em 0;
+}
+
+.reserve::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .6;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: -1;
+}
+
+.reserve-btn {
+  padding: .6em 2em;
+  font-size: 1.8rem;
+}
+
 /* STYLING FOR THE WHY US SECTION STARTS */
 .video-flex {
   display: flex;
@@ -648,18 +670,15 @@ footer {
 
 }
 
-
+/* MEDIA QUERY FOR 1024PX */
 @media (min-width: 64em) {
   #header {
     padding: 0 2em;
+    font-size: 1.8rem;
   }
 
-  .reserve {
-    background: url(../images/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding: 2em 2em 0;
+  .reorder>a {
+    font-size: 1.8rem;
   }
 
   .reserve article {
@@ -678,6 +697,21 @@ footer {
   h2>span {
     font-size: 1.4rem;
   }
+
+/* STYLING FOR THE WHY US SECTION STARTS */
+#why-us {
+  padding: 1em 5em 0;
+}
+
+#why-us h1 {
+  font-size: 2.4rem;
+}
+
+.over50 {
+  margin: 0 -5em;
+  padding: 4em 5em;
+}
+
 }
 
 @media (min-width: 80em) {
