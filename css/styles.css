@@ -121,7 +121,7 @@ main {
   margin: 5em 0 2em;
 }
 
-/* reserve a vehicle element */
+/* reserve a vehicle section */
 .reserve {
   padding: 2em 1em 0;
   background-color: var(--primary-color);
@@ -141,10 +141,12 @@ main h2 {
 
 .reserve h2 {
   color: white;
+  font-size: 2.4rem;
 }
 h2>span {
   display: block;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  color: var(--lightred);
 }
 
 /* ENTER LOCATION INPUT */
@@ -498,7 +500,7 @@ footer {
 
 
 /* ====== MEDIA QUERIES */
-@media (min-width: 800px) {
+@media (min-width: 50em) {
 
   #header {
       display: flex;
