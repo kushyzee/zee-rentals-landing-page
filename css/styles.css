@@ -297,6 +297,14 @@ h2>span {
   margin: 0 1em;
 }
 
+#our-vehicles div {
+  width: 100%;
+}
+
+#our-vehicles img {
+  width: 100%;
+}
+
 .car-name {
   display: flex;
   justify-content: center;
@@ -470,10 +478,11 @@ footer {
 
 
 /* ====== MEDIA QUERIES */
-@media (min-width: 600px) {
+@media (min-width: 800px) {
+
   #header {
       display: grid;
-      grid-template-columns: 10% 60% 30%;
+      grid-template-columns: 30% 40% 30%;
       justify-items: start;
   
       width: 100%;
@@ -505,6 +514,7 @@ footer {
       display: flex;
       grid-column: 2 / 3;
       grid-row: 1;
+      justify-self: end;
       
       padding-bottom: 0;
   
