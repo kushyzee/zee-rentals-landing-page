@@ -216,7 +216,7 @@ h2>span {
 /* included the buttons in the #why-us, #resources and #our-vehicle sections */
 .reserve-btn:hover, .over50 button[type="submit"]:hover,
 #resources a:hover,
-#our-vehicles a:hover, #submit:hover {
+#our-vehicles a:hover, #submit:hover, .button:hover {
   cursor: pointer;
   transform: scale(1.05);
   opacity: .7;
@@ -248,8 +248,15 @@ h2>span {
   color: var(--darkred);
 }
 
-#why-us p {
+.booknow {
+  display: flex;
+  justify-content: center;
+}
+
+.booknow>a {
+  font-weight: 600;
   font-size: 1.8rem;
+  padding: .6em 2.4em;
 }
 
 .over50 {
@@ -296,14 +303,11 @@ h2>span {
   outline: none; 
 }
 
+/* OUR VEHICLES SECTION STARTS */
 #our-vehicles {
   background-color: white;
   color: var(--secondary-color);
   margin: 0 1em;
-}
-
-#our-vehicles div {
-  width: 100%;
 }
 
 #our-vehicles img {
@@ -364,7 +368,8 @@ hr {
   margin-bottom: 1em;
 }
 
-#resources a {
+/* buttons for the "learn more" tab and also the button for "book now" */
+.learn-more, .button {
   display: inline-block;
 
   border-radius: 30px;
@@ -387,8 +392,17 @@ hr {
 }
 
 .ios-android a {
+  display: inline-block;
+
   width: 100%;
-  font-size: 1.4rem;
+  border-radius: 30px;
+  margin: 2em 0;
+  padding: .5em .3em;
+
+  font-weight: 500;  
+  color: white;
+  background-color: var(--darkred);
+  transition: all .1s linear;
 }
 
 .fa-android, .fa-apple {
@@ -418,6 +432,7 @@ hr {
   border-radius: 30px;
   padding-left: .7em;
   outline: none;
+  line-height: 30px;
 }
 
 #submit {
@@ -545,4 +560,77 @@ footer {
     }
 
 /* ===== MAIN SECTION ====== */
+/* STYLING FOR THE WHY US SECTION STARTS */
+.video-flex {
+  display: flex;
+  flex-direction: row-reverse;
+  place-items: center;
+  gap: 1.5em;
+  padding: 2em 0;
+}
+
+.video-flex>div {
+  flex-basis: 50%;
+}
+
+#video {
+  flex-basis: 50%;
+  align-self: flex-start;
+}
+
+#why-us h1 {
+  font-size: 2.5rem;
+}
+
+/* OUR VEHICLES SECTION STARTS */
+.vehicle-wrapper {
+  display: flex;
+  gap: .5em;
+}
+
+.resources-wrapper {
+  display: flex;
+  padding: 0 1em 1.5em;
+  gap: .5em;
+}
+
+#resources div:not(.ios-android, .resources-form) {
+  margin: 0;
+  box-shadow: 0 0 4px hsla(0, 0%, 0%, .4);
+}
+
+.ios-android {
+  display: flex;
+  width: 100%;
+  /* margin: 0 1em; */
+  padding: 0 1em;
+  gap: 1em;
+  justify-content: center;
+}
+
+.ios-android a {
+  display: inline-block;
+
+  width: auto;
+  padding: .5em .8em;
+
+  font-weight: 500;
+}
+
+#resources form {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+#submit {
+  padding: .4em 1em;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
 }
