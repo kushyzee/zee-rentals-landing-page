@@ -34,98 +34,97 @@
         <main>
             <!-- ===== RESERVE VEHICLE SECTION STARTS ====== -->
             <section class="reserve">
-                <h2>Reserve a vehicle <span>(Time limit between 8:00 AM and 10:00 PM)</span></h2>
-                <form class="reserve-form" action="#" method="post">
-                    <input type="search" name="location" id="location" placeholder="Enter location">
-                    <div class="pickup-date">
-                        <div>
-                            <label for="pickup">Pickup date:</label>
-                            <input type="date" name="pickup" id="pickup">
+                <article>
+                    <h2>Reserve a vehicle <span>(Time limit between 8:00 AM and 10:00 PM)</span></h2>
+                    <form class="reserve-form" action="#" method="post">
+                        <input type="search" name="location" id="location" placeholder="Enter location">
+                        <div class="pickup-date">
+                            <div>
+                                <label for="pickup">Pickup date:</label>
+                                <input type="date" name="pickup" id="pickup">
+                            </div>
+                            <!-- ====== PICKUP TIME SECTION START ======= -->
+                            <div>
+                                <label for="time">Time:</label>
+                                <select name="pickup-time" id="pickup-time">
+                                    <option value="8:00 AM">08:00 AM</option>
+                                    <option value="8:30 AM">08:30 AM</option>
+                                    <option value="9:00 AM">09:00 AM</option>
+                                    <option value="9:30 AM">09:30 AM</option>
+                                    <option value="10:00 AM">10:00 AM</option>
+                                    <option value="10:30 AM">10:30 AM</option>
+                                    <option value="11:00 AM">11:00 AM</option>
+                                    <option value="11:30 AM">11:30 AM</option>
+                                    <option value="12:00 PM">12:00 PM</option>
+                                    <option value="12:30 PM">12:30 PM</option>
+                                    <option value="1:00 PM">01:00 PM</option>
+                                    <option value="1:30 PM">01:30 PM</option>
+                                    <option value="2:00 PM">02:00 PM</option>
+                                    <option value="2:30 PM">02:30 PM</option>
+                                    <option value="3:00 PM">03:00 PM</option>
+                                    <option value="3:30 PM">03:30 PM</option>
+                                    <option value="4:00 PM">04:00 PM</option>
+                                    <option value="4:30 PM">04:30 PM</option>
+                                    <option value="5:00 PM">05:00 PM</option>
+                                    <option value="5:30 PM">05:30 PM</option>
+                                    <option value="6:00 PM">06:00 PM</option>
+                                    <option value="6:30 PM">06:30 PM</option>
+                                    <option value="7:00 PM">07:00 PM</option>
+                                    <option value="7:00 PM">07:30 PM</option>
+                                    <option value="7:00 PM">08:00 PM</option>
+                                    <option value="7:00 PM">08:30 PM</option>
+                                    <option value="7:00 PM">09:00 PM</option>
+                                    <option value="7:00 PM">09:30 PM</option>
+                                    <option value="7:00 PM">10:00 PM</option>
+                                </select>
+                            </div>
+                            <!-- ====== PICKUP TIME SECTION END ======= -->
                         </div>
-
-                        <!-- ====== PICKUP TIME SECTION START ======= -->
-                        <div>
-                            <label for="time">Time:</label>
-                            <select name="pickup-time" id="pickup-time">
-                                <option value="8:00 AM">08:00 AM</option>
-                                <option value="8:30 AM">08:30 AM</option>
-                                <option value="9:00 AM">09:00 AM</option>
-                                <option value="9:30 AM">09:30 AM</option>
-                                <option value="10:00 AM">10:00 AM</option>
-                                <option value="10:30 AM">10:30 AM</option>
-                                <option value="11:00 AM">11:00 AM</option>
-                                <option value="11:30 AM">11:30 AM</option>
-                                <option value="12:00 PM">12:00 PM</option>
-                                <option value="12:30 PM">12:30 PM</option>
-                                <option value="1:00 PM">01:00 PM</option>
-                                <option value="1:30 PM">01:30 PM</option>
-                                <option value="2:00 PM">02:00 PM</option>
-                                <option value="2:30 PM">02:30 PM</option>
-                                <option value="3:00 PM">03:00 PM</option>
-                                <option value="3:30 PM">03:30 PM</option>
-                                <option value="4:00 PM">04:00 PM</option>
-                                <option value="4:30 PM">04:30 PM</option>
-                                <option value="5:00 PM">05:00 PM</option>
-                                <option value="5:30 PM">05:30 PM</option>
-                                <option value="6:00 PM">06:00 PM</option>
-                                <option value="6:30 PM">06:30 PM</option>
-                                <option value="7:00 PM">07:00 PM</option>
-                                <option value="7:00 PM">07:30 PM</option>
-                                <option value="7:00 PM">08:00 PM</option>
-                                <option value="7:00 PM">08:30 PM</option>
-                                <option value="7:00 PM">09:00 PM</option>
-                                <option value="7:00 PM">09:30 PM</option>
-                                <option value="7:00 PM">10:00 PM</option>
-                            </select>
+                        <div class="return-date">
+                            <div>
+                                <label for="return">Return date:</label>
+                                <input type="date" name="return" id="return">
+                            </div>
+                            <!-- ====== RETURN TIME SECTION START ======= -->
+                            <div>
+                                <label for="time">Time:</label>
+                                <select name="return-time" id="return-time">
+                                    <option value="8:00 AM">08:00 AM</option>
+                                    <option value="8:30 AM">08:30 AM</option>
+                                    <option value="9:00 AM">09:00 AM</option>
+                                    <option value="9:30 AM">09:30 AM</option>
+                                    <option value="10:00 AM">10:00 AM</option>
+                                    <option value="10:30 AM">10:30 AM</option>
+                                    <option value="11:00 AM">11:00 AM</option>
+                                    <option value="11:30 AM">11:30 AM</option>
+                                    <option value="12:00 PM">12:00 PM</option>
+                                    <option value="12:30 PM">12:30 PM</option>
+                                    <option value="1:00 PM">01:00 PM</option>
+                                    <option value="1:30 PM">01:30 PM</option>
+                                    <option value="2:00 PM">02:00 PM</option>
+                                    <option value="2:30 PM">02:30 PM</option>
+                                    <option value="3:00 PM">03:00 PM</option>
+                                    <option value="3:30 PM">03:30 PM</option>
+                                    <option value="4:00 PM">04:00 PM</option>
+                                    <option value="4:30 PM">04:30 PM</option>
+                                    <option value="5:00 PM">05:00 PM</option>
+                                    <option value="5:30 PM">05:30 PM</option>
+                                    <option value="6:00 PM">06:00 PM</option>
+                                    <option value="6:30 PM">06:30 PM</option>
+                                    <option value="7:00 PM">07:00 PM</option>
+                                    <option value="7:00 PM">07:30 PM</option>
+                                    <option value="7:00 PM">08:00 PM</option>
+                                    <option value="7:00 PM">08:30 PM</option>
+                                    <option value="7:00 PM">09:00 PM</option>
+                                    <option value="7:00 PM">09:30 PM</option>
+                                    <option value="7:00 PM">10:00 PM</option>
+                                </select>
+                            </div>
+                            <!-- ====== RETURN TIME SECTION END ======= -->
                         </div>
-                        <!-- ====== PICKUP TIME SECTION END ======= -->
-                    </div>
-
-                    <div class="return-date">
-                        <div>
-                            <label for="return">Return date:</label>
-                            <input type="date" name="return" id="return">
-                        </div>
-
-                        <!-- ====== RETURN TIME SECTION START ======= -->
-                        <div>
-                            <label for="time">Time:</label>
-                            <select name="return-time" id="return-time">
-                                <option value="8:00 AM">08:00 AM</option>
-                                <option value="8:30 AM">08:30 AM</option>
-                                <option value="9:00 AM">09:00 AM</option>
-                                <option value="9:30 AM">09:30 AM</option>
-                                <option value="10:00 AM">10:00 AM</option>
-                                <option value="10:30 AM">10:30 AM</option>
-                                <option value="11:00 AM">11:00 AM</option>
-                                <option value="11:30 AM">11:30 AM</option>
-                                <option value="12:00 PM">12:00 PM</option>
-                                <option value="12:30 PM">12:30 PM</option>
-                                <option value="1:00 PM">01:00 PM</option>
-                                <option value="1:30 PM">01:30 PM</option>
-                                <option value="2:00 PM">02:00 PM</option>
-                                <option value="2:30 PM">02:30 PM</option>
-                                <option value="3:00 PM">03:00 PM</option>
-                                <option value="3:30 PM">03:30 PM</option>
-                                <option value="4:00 PM">04:00 PM</option>
-                                <option value="4:30 PM">04:30 PM</option>
-                                <option value="5:00 PM">05:00 PM</option>
-                                <option value="5:30 PM">05:30 PM</option>
-                                <option value="6:00 PM">06:00 PM</option>
-                                <option value="6:30 PM">06:30 PM</option>
-                                <option value="7:00 PM">07:00 PM</option>
-                                <option value="7:00 PM">07:30 PM</option>
-                                <option value="7:00 PM">08:00 PM</option>
-                                <option value="7:00 PM">08:30 PM</option>
-                                <option value="7:00 PM">09:00 PM</option>
-                                <option value="7:00 PM">09:30 PM</option>
-                                <option value="7:00 PM">10:00 PM</option>
-                            </select>
-                        </div>
-                        <!-- ====== RETURN TIME SECTION END ======= -->
-                    </div>
-                    <div class="btn-wrapper"><input class="reserve-btn" type="submit" value="Show offers"></div>
-                </form>
+                        <div class="btn-wrapper"><input class="reserve-btn" type="submit" value="Show offers"></div>
+                    </form>
+                </article>
             </section>
             <!-- RESERVE VEHICLE SECTION END ======= -->
 

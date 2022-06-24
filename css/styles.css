@@ -14,6 +14,7 @@ html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     scroll-padding: 85px 0 0;
+    /* background-color: var(--primary-color); */
 }
 
 body {
@@ -125,6 +126,11 @@ main {
 .reserve {
   padding: 2em 1em 0;
   background-color: var(--primary-color);
+  background: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 2em 2em 0;
   color: white;
 }
 
@@ -501,12 +507,16 @@ footer {
 
 /* ====== MEDIA QUERIES */
 @media (min-width: 50em) {
+  body {
+    box-shadow: 0 0 10px hsla(0, 0%, 0%, 1);
+    /* max-width: 1400px; */
+    /* margin: 0 auto; */
+  }
 
   #header {
       display: flex;
-      /* grid-template-columns: 30% 40% 30%;
-      justify-items: start; */
   
+      /* max-width: 1400px; */
       width: 100%;
       padding: 0 1em;
 
@@ -635,5 +645,41 @@ footer {
   justify-content: center;
   gap: 2em;
 }
+
+}
+
+
+@media (min-width: 64em) {
+  #header {
+    padding: 0 2em;
+  }
+
+  .reserve {
+    background: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 2em 2em 0;
+  }
+
+  .reserve article {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  main h2 {
+    font-size: 2.4rem;
+  }
+
+  .reserve h2 {
+    font-size: 2.6rem;
+  }
+
+  h2>span {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 80em) {
 
 }
