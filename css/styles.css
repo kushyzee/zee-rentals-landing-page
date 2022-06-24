@@ -354,7 +354,7 @@ hr {
   margin-bottom: 1em;
 }
 
-#resources div:not(.ios-android, .resources-form) {
+#resources div:not(.ios-android, .resources-form, .resources-wrapper) {
   margin: 0 1em 1.5em;
   box-shadow: 0 2px 6px hsla(0, 0%, 0%, .4);
 }
@@ -590,15 +590,16 @@ footer {
   gap: .5em;
 }
 
-.resources-wrapper {
-  display: flex;
-  padding: 0 1em 1.5em;
-  gap: .5em;
-}
-
-#resources div:not(.ios-android, .resources-form) {
+#resources div:not(.ios-android, .resources-form, .resources-wrapper) {
   margin: 0;
   box-shadow: 0 0 4px hsla(0, 0%, 0%, .4);
+}
+
+.resources-wrapper {
+  margin: 0;
+  display: flex;
+  padding: 0 1em 1.5em;
+  gap: .8em;
 }
 
 .ios-android {
