@@ -10,7 +10,6 @@ This project is focused on building an app that is functionally similar to [Free
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
@@ -57,8 +56,7 @@ The following guidelines were provided:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Preview website](https://kushyzee.github.io/zee-rentals-landing-page/)
 
 ## My process
 
@@ -67,22 +65,13 @@ The following guidelines were provided:
 - Semantic HTML5 markup
 - CSS custom properties
 - Mobile-first workflow
-
-### What I learned
-
-- I was having problem with toggling the sidebar on and off. after hiding the sidebar with `#header ul {right: -100%}` it refused to show up when i set `#checkbox:checked ~ ul {right: 0;}` but i solved it by adding nav to it. so the right code is:
-
-```css
-#checkbox:checked ~ nav ul {
-  right: 0;
-}
-```
-
-- another issue that came up was trying to position the navbar toggler to the far right. despite using flexbox `justify-content: space-between`, it still didn't align it to the right. A quick google search showed i have to set a `margin-left: auto` on the log in/register button and that fixed the issue.
+- CSS flexbox
 
 ### Useful resources
 
 [mdn web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container) gave me the solution on how to align flex items horizontally using `margin-left` auto
+
+[kevin powell](https://youtu.be/sNYVqfRwX1A) His youtube channel contains a lot of css tips and tricks. I learned about the isolation property which i used for the car background as seen in the desktop layout
 
 ## Author
 

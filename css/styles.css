@@ -511,7 +511,6 @@ footer {
   #header {
       display: flex;
   
-      /* max-width: 1400px; */
       width: 100%;
       padding: 0 1em;
 
@@ -754,6 +753,7 @@ footer {
   #header {
     max-width: 1800px;
     left: auto;
+    padding: 0 4em;
   }
 
   main h2 {
