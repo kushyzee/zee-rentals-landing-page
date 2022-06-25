@@ -52,6 +52,7 @@ The following guidelines were provided:
 ### Screenshot
 
 ![mobile screenshot](./images/mobile.png)
+
 ![desktop screenshot](./images/desktop.png)
 
 ### Links
