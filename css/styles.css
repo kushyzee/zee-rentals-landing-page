@@ -201,7 +201,6 @@ h2>span {
 
 /* SHOW OFFERS BUTTON */
 .reserve-btn {
-  margin-bottom: 4em;
   margin: 1em auto 4em;
   padding: .6em 1em;
   border: none;
@@ -400,7 +399,7 @@ hr {
   width: 100%;
   border-radius: 30px;
   margin: 2em 0;
-  padding: .5em .3em;
+  padding: .6rem .3rem;
 
   font-weight: 500;  
   color: white;
@@ -501,6 +500,7 @@ footer {
 
 
 /* ====== MEDIA QUERIES */
+/* media query for 800px and above */
 @media (min-width: 50em) {
   body {
     box-shadow: 0 0 10px hsla(0, 0%, 0%, 1);
@@ -582,7 +582,7 @@ footer {
   content: "";
   position: absolute;
   inset: 0;
-  opacity: .6;
+  opacity: .5;
   width: 100%;
   height: 100%;
   background-color: black;
@@ -647,7 +647,7 @@ footer {
   display: inline-block;
 
   width: auto;
-  padding: .5em .8em;
+  padding: .5em .9em;
 
   font-weight: 500;
 }
@@ -670,7 +670,7 @@ footer {
 
 }
 
-/* MEDIA QUERY FOR 1024PX */
+/* MEDIA QUERY FOR 1024PX AND ABOVE */
 @media (min-width: 64em) {
   #header {
     padding: 0 2em;
@@ -682,7 +682,7 @@ footer {
   }
 
   .reserve article {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
   }
 
@@ -696,6 +696,18 @@ footer {
 
   h2>span {
     font-size: 1.4rem;
+  }
+
+  #location {
+    margin-bottom: 2em;
+  }
+
+  .reserve-form input:not(.reserve-btn), .reserve-form select {
+    margin-bottom: 1.5em;
+  }
+
+  .reserve-btn {
+    margin-top: 2em;
   }
 
 /* STYLING FOR THE WHY US SECTION STARTS */
@@ -716,8 +728,74 @@ footer {
   padding: 4em 5em;
 }
 
+#resources form {
+  align-items: center;
 }
 
-@media (min-width: 80em) {
+#submit {
+  font-size: 1.7rem;
+  padding: .4em 2.2em;
 
+}
+
+}
+
+/* MEDIA QUERY FOR 1280PX AND ABOVE */
+@media (min-width: 80em) {
+  html {
+    background-color: var(--primary-color);
+  }
+
+  body {
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+
+  #header {
+    max-width: 1800px;
+    left: auto;
+  }
+
+  main h2 {
+    font-size: 2.6rem;
+  }
+
+  .reserve h2 {
+    font-size: 2.8rem;
+  }
+
+  .video-flex {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  #why-us h1 {
+    font-size: 3.6rem;
+  }
+
+  .video-flex p {
+    line-height: 1.8;
+  }
+
+  .over50 h2 {
+    font-size: 2.5rem;
+  }
+
+  .over50 form {
+    max-width: 1000px;
+    margin: 3em auto 0;
+  }
+  
+  /* TARGETING THE LINKS IN OUR VEHICLES SECTION */
+  #our-vehicles a {
+    font-size: 2rem;
+  }
+
+  #resources h3 {
+    font-size: 2.3rem;
+  }
+
+  #resources div p:nth-of-type(1) {
+    font-size: 2.2rem;
+  }
 }
